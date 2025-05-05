@@ -4,13 +4,14 @@ import { motion } from 'framer-motion';
 
 const Navbar = ({ isOpenSidebar, setIsOpenSidebar }) => {
   return (
-    <nav className="absolute top-0 left-0 w-full pt-10 text-white z-40">
+    <nav className="absolute top-0 left-0 w-full pt-10 text-white z-[999]">
       <div className="pl-[5rem] pr-[5rem]">
         <div className="flex justify-between items-center">
         {/*  logo section */}
           <motion.h1
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
+            viewport={{ once: true}}
             transition={{
               type: "spring",
               stiffness: 100,
@@ -25,6 +26,7 @@ const Navbar = ({ isOpenSidebar, setIsOpenSidebar }) => {
           <motion.div
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
+            viewport={{ once: true}}
             transition={{
               type: "spring",
               stiffness: 100,
